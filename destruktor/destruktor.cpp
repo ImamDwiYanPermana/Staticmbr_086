@@ -11,6 +11,20 @@ public :
     void cetakData();
     void isiData();
 };
+// Definisi Member function 
+angka::angka(int i) {// construktor
+    panjang = i;
+    arr = new int[i];
+    isiData();
+}
+
+angka::~angka() {// Destruktor
+    cout << endl;
+    cetakData();
+    delete[]arr;
+    cout << "alamat array sudah dilepaskan" << endl;
+
+}
 
 int main()
 {
